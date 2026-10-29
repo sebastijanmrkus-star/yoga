@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bloom Yoga Studio – Indiranagar, Bengaluru</title>
+<meta name="description" content="Bloom Yoga Studio in Indiranagar, Bengaluru. Breathe. Move. Bloom. Weekly timetable, instructors, prices and class booking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Bloom Yoga Studio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#5f7a5c" stroke-width="1.5" aria-hidden="true"><path d="M12 21c-3-2-6-5-6-9 3 0 5 1.5 6 4 1-2.500 3-4 6-4 0 4-3 7-6 9z"/><path d="M12 16c-1.500-3-1.500-7 0-11 1.500 4 1.500 8 0 11z"/></svg>
+      Bloom
+    </a>
+    <nav>
+      <a href="#timetable">Timetable</a>
+      <a href="#instructors">Instructors</a>
+      <a href="#prices">Prices</a>
+      <a class="btn small" href="#book">Book a class</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Bloom Yoga Studio</p>
+      <h1>Breathe.<br>Move. <em>Bloom.</em></h1>
+      <p>A calm, welcoming space in the heart of Indiranagar to slow down, stretch out and find your balance.</p>
+      <a class="btn" href="#book">Book a class</a>
+      <p class="loc">Indiranagar, Bengaluru</p>
+    </div>
+  </section>
+
+  <section id="timetable">
+    <div class="wrap">
+      <p class="eyebrow">Every week</p>
+      <h2>Timetable</h2>
+      <div class="classes" id="classes"></div>
+    </div>
+  </section>
+
+  <section id="instructors" class="alt">
+    <div class="wrap">
+      <p class="eyebrow">Your guides</p>
+      <h2>Instructors</h2>
+      <div class="people" id="people"></div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="wrap">
+      <p class="eyebrow">Simple pricing</p>
+      <h2>Prices</h2>
+      <div class="prices">
+        <div class="price"><div><h3>Drop-in</h3><small>Per class</small></div><div class="amt">₹600</div></div>
+        <div class="price"><div><h3>Power Vinyasa</h3><small>Per class</small></div><div class="amt">₹700</div></div>
+        <div class="price"><div><h3>Prenatal Yoga</h3><small>Per class</small></div><div class="amt">₹800</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="book">
+    <div class="wrap">
+      <p class="eyebrow center">Join us on the mat</p>
+      <h2 class="center">Book a class</h2>
+      <form id="bookForm" name="booking" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="booking">
+        <p class="hp" aria-hidden="true">
+          <label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+        <label>Name
+          <input name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </label>
+        <label>Phone
+          <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" required>
+        </label>
+        <label>Class
+          <select name="class" id="classSel" required>
+            <option value="">Choose a class</option>
+            <option value="Morning Flow">Morning Flow · 7:00</option>
+            <option value="Power Vinyasa">Power Vinyasa · 18:30</option>
+            <option value="Prenatal Yoga">Prenatal Yoga · 11:00</option>
+            <option value="Yin Yoga">Yin Yoga · 19:30</option>
+            <option value="Sunset Hatha">Sunset Hatha · 17:30</option>
+          </select>
+        </label>
+        <label>Day
+          <select name="day" id="daySel" required>
+            <option value="">Choose a day</option>
+            <option>Mon</option><option>Tue</option><option>Wed</option><option>Thu</option>
+            <option>Fri</option><option>Sat</option><option>Sun</option>
+          </select>
+        </label>
+        <button class="btn" type="submit">Book my spot</button>
+        <p class="hint" id="err" role="alert"></p>
+        <div class="thanks" role="status">
+          <h3>Thank you, <span id="tyName"></span>.</h3>
+          <p id="tyMsg"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Bloom</div>
+    Bloom Yoga Studio · Indiranagar, Bengaluru<br>
+    Breathe. Move. Bloom.
+  </div>
+</footer>
+
+</body>
+</html>
