@@ -50,6 +50,10 @@ form.addEventListener('submit', function (e) {
     err.textContent = 'Please fill in your name, a valid phone number, a class and a day.';
     return;
   }
+  if (!navigator.onLine) {
+    err.textContent = "You're offline. Connect to the internet to book, or call us.";
+    return;
+  }
   err.textContent = '';
   btn.disabled = true;
   btn.textContent = 'Sending…';
@@ -70,3 +74,8 @@ form.addEventListener('submit', function (e) {
     btn.textContent = 'Book my spot';
   });
 });
+
+// Installable app: cache the site so the timetable opens offline
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js'); });
+}

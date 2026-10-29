@@ -1,0 +1,19 @@
+{
+  "name": "Bloom Yoga Studio",
+  "short_name": "Bloom",
+  "description": "Timetable, instructors, prices and class booking for Bloom Yoga Studio, Indiranagar.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbf8f3",
+  "theme_color": "#fbf8f3",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Book a class", "url": "/#book", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Timetable", "url": "/#timetable", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
